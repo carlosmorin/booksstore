@@ -1,0 +1,18 @@
+<section class="search-form">
+  <%= form_for search_entity, method: :get do |f| %>
+  <div class="row">
+    <div class="col-lg-3">
+        <%= f.collection_select :store_id, @stores, :id, :codename, 
+        {include_blank: 'Select a store'},
+        {class: "form-control"} %>                            
+    </div>
+    <div class="col-lg-2">
+      <span class="input-group-btn">
+      <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
+       <span class="glyphicon glyphicon-search"></span> Filter by store <%= "#{word}" %>
+      <% end %>
+     </span>
+    </div>
+  </div>
+   <% end %>
+</section>

@@ -1,0 +1,17 @@
+
+
+<div class="panel panel-default">
+ <div class="panel-heading">Books</div>
+ <div class="panel-body">
+  <%= render partial: 'layouts/search_form_books', locals: { search_entity: 'books', word: "" } %>
+  <br>
+  <div class="col-md-5 ">
+    <%= button_to new_book_path, {method: :get, class: "btn btn-success"} do %>
+     <span class="glyphicon glyphicon-plus" aria-hidden="true"> </span> Add
+    <% end %>
+
+    </div>
+ </div>
+ <%= render partial: 'results_search' %>
+</div>
+<div id="modal_add"></div>

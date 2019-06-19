@@ -1,0 +1,30 @@
+ <table class="table" width="90%">
+ <thead>
+  <tr>
+  </tr>
+  <tr>
+      <th>Book</th>
+      <th>Store</th>
+      <th>Quantity</th>
+      <th colspan="2">
+        Actions
+      </th>
+  </tr>
+ </thead>
+
+ <tbody>
+   <% @books_stores.each do |books_store| %>
+      <tr>
+        <td><%= books_store.book.title %></td>
+        <td><%= books_store.store.codename %></td>
+        <td><%= books_store.quantity %></td>
+        <td>
+          <%= link_to 'Show', books_store, {class: "btn btn-light "} %>
+            
+        </td>
+        <td><%= link_to 'Edit', edit_books_store_path(books_store), {class: "btn btn-success "} %></td>
+        <td><%= link_to 'Destroy', books_store, method: :delete, class: "btn btn-danger", data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+ </tbody>
+</table>

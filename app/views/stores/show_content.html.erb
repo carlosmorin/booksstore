@@ -1,0 +1,40 @@
+
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h5> <b>Stock </b>-  <%= @store.codename %></h5>
+  </div>
+
+
+  <div class="panel-body">
+
+    <div class="col-md-12 ">
+    <table class="table">
+     <thead>
+      <tr>
+      </tr>
+      <tr>
+       <th>Libro</th>
+       <th>Autor</th>
+       <th>Cantidad</th>
+       <th colspan="2"></th>
+      </tr>
+     </thead>
+     <tbody>
+        <% @store.books_stores.each do |bs| %>
+         <tr>
+           <td><%= bs.book.title %></td>
+           <td><%= bs.book.author %></td>
+           <td><%= bs.quantity %></td>
+           <td>-</td>
+         </tr>
+        <% end %>
+     </tbody>
+
+      </table>
+
+    
+    </div>
+  </div>
+</div>

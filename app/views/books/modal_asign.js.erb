@@ -1,0 +1,19 @@
+$("#modal_add").html("<%= j (render partial: 'modal_asign', locals: { book: @book, stores: @stores }) %>");
+$("#book-modal").modal('show');
+
+
+
+
+$(function(){
+  $("form.edit_book").on("submit", function(event){
+    $.ajax({
+      type: "POST",
+      url: this.action,
+      data: $(this).serialize(),
+      success: function(response) {
+        //update the DOM
+      }
+    });
+    event.preventDefault();
+  });
+})
