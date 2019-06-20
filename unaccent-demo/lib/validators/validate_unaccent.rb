@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ValidateUnaccent < ActiveModel::Validator
   def validate(record)
     records = options[:model].all

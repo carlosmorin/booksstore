@@ -1,12 +1,12 @@
 <section class="search-form">
   <%= form_for search_entity, method: :get do |f| %>
   <div class="row">
-    <div class="col-lg-5">
+    <div class="col-lg-5 col-md-5 col-sm-5">
          <%= label_tag :keywords, nil, class: "sr-only" %>
          <%= text_field_tag :keywords, nil, placeholder: "Search by title or author",
                              class: "form-control", value: "#{@keywords}" %>
     </div>
-    <div class="col-lg-3">
+    <div class="col-lg-3  col-md-3 col-sm-4">
       <%= label_tag :year, nil, class: "sr-only" %>
       <%= text_field_tag :year, nil, placeholder: "year",
                              class: "form-control", value: "#{@year}" %>
